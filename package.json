@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "dependencies": {
     "express": "^4.18.1",
     "ws": "^8.8.1"
@@ -19,5 +20,6 @@
     "url": "https://github.com/weslleysr85/WebSockets/issues"
   },
   "homepage": "https://github.com/weslleysr85/WebSockets#readme",
-  "description": ""
+  "description": "https://github.com/websockets/ws#external-https-server",
+  "devDependencies": {}
 }

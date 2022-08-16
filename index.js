@@ -1,11 +1,13 @@
-let clients = [
-    new WebSocket('ws://localhost:3000'),
-    new WebSocket('ws://localhost:3000')
-  ];
-  clients.map(client => {
-    client.on('message', msg => console.log(msg));
+import WebSocket, { WebSocketServer } from 'ws';
+
+const wss = new WebSocketServer({ port: 3000 });
+
+wss.on('connection', function connection(ws) {
+  ws.on('message', function message(data, isBinary) {
+    wss.clients.forEach(function each(client) {
+      if (client !== ws && client.readyState === WebSocket.OPEN) {
+        client.send(data, { binary: isBinary });
+      }
+    });
   });
-  // Esperamos o cliente conectar com o servidor usando async/await
-  await new Promise(resolve => clients[0].once('open', resolve));
-  // Imprimi "Hello!" duas vezes, um para cada cliente
-  clients[0].send('Hello!');
+});
