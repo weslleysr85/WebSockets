@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "ws": "^8.8.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "websockets",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weslleysr85/WebSockets.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weslleysr85/WebSockets/issues"
+  },
+  "homepage": "https://github.com/weslleysr85/WebSockets#readme",
+  "description": ""
+}

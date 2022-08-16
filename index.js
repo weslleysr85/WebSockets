@@ -1,6 +1,6 @@
 let clients = [
-    new WebSocket('ws://localhost:8080'),
-    new WebSocket('ws://localhost:8080')
+    new WebSocket('ws://localhost:3000'),
+    new WebSocket('ws://localhost:3000')
   ];
   clients.map(client => {
     client.on('message', msg => console.log(msg));
