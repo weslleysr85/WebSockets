@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <script type="text/javascript">
         const ws = new WebSocket('ws://localhost:3000');
         // A classe `WebSocket` nos navegadores tem uma sintaxe um pouco diferente de `ws`
@@ -19,7 +15,12 @@
         ws.onmessage = function(msg) {
           document.querySelector('#messages').innerHTML += `<div>${msg.data}</div>`;
         };
-      </script>
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
 </head>
 <body>
     <h1>Chat</h1>
